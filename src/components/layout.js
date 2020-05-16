@@ -25,8 +25,11 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // uncomment this to make it work
   const { localizedNavigate } = useLocalization()
-
+  const onClick = () => {
+    localizedNavigate("/page-2")
+  }
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -37,6 +40,10 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <button onClick={onClick}>
+          localization navigation (doesn't work)
+        </button>
+
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

@@ -1,7 +1,12 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import PropTypes from "prop-types"
 
-// You can delete this file if you're not using it
+import Layout from "./src/components/layout"
+
+export const wrapRootElement = ({ element }) => {
+  return <Layout>{element}</Layout>
+}
+
+wrapRootElement.propTypes = {
+  element: PropTypes.node.isRequired,
+}
