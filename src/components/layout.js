@@ -9,6 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { useLocalization } from "gatsby-plugin-internationalization"
+
 import Header from "./header"
 import "./layout.css"
 
@@ -22,6 +24,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  const { localizedNavigate } = useLocalization()
 
   return (
     <>
