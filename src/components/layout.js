@@ -40,9 +40,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <button onClick={onClick}>
-          localization navigation (doesn't work)
-        </button>
+        <button onClick={onClick}>localized navigation (in Layout)</button>
 
         <main>{children}</main>
         <footer>
